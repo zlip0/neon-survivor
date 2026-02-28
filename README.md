@@ -1,7 +1,3 @@
-# Neon Survivor
-
-A 2D survivor-style game built with **Godot 4** and **C#**.
-
 ## Project Structure
 
 - `Scenes/` – game scenes (`Game.tscn`, `MainMenu.tscn`)
@@ -31,10 +27,3 @@ A 2D survivor-style game built with **Godot 4** and **C#**.
 - Core gameplay logic is in `Scripts/Game.cs`.
 - Main menu flow is in `Scripts/MainMenu.cs`.
 - Player, enemy, bullet, XP gem, and UI systems are split into dedicated scripts.
-
-## Git
-
-This repository is configured to use:
-
-- Remote: `origin`
-- URL: `https://github.com/zlip0/neon-survivor.git`
