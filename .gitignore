@@ -1,0 +1,42 @@
+# Godot 4 cache/import data
+.godot/
+.import/
+
+# Godot export/build output
+*.pck
+*.apk
+*.ipa
+*.exe
+*.x86_64
+*.x86_32
+*.zip
+
+# Project-specific generated/exported runtime artifacts
+data_2d-game_windows_x86_64/
+Neon Survivor.console.exe
+
+# C# / .NET
+bin/
+obj/
+.vs/
+*.user
+*.rsuser
+*.suo
+*.userprefs
+*.pidb
+*.mdb
+*.opendb
+*.VC.db
+
+# JetBrains Rider / ReSharper
+.idea/
+*.sln.iml
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# Visual Studio Code
+.vscode/
+
+# OS files
+Thumbs.db
+.DS_Store
