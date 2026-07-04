@@ -1,29 +1,64 @@
-## Project Structure
+# Neon Survivor
 
-- `Scenes/` – game scenes (`Game.tscn`, `MainMenu.tscn`)
-- `Scripts/` – gameplay and UI scripts (`Player.cs`, `Enemy.cs`, `Game.cs`, etc.)
-- `project.godot` – Godot project configuration
-- `2d-game.sln` / `2d-game.csproj` – C# solution and project files
+A minimalist neon arena-survival game built with **Godot 4.6 (.NET/C#)**. Move through a glowing grid, automatically fire at the nearest enemy, collect XP gems, and choose upgrades to survive escalating waves for as long as possible.
+
+## Gameplay
+
+- **Move:** `WASD` or arrow keys
+- **Start / restart:** `Enter` or `Space`
+- **Attack:** auto-aim and auto-fire target the nearest enemy
+- **Level up:** collect XP gems and choose one of three upgrades with the mouse or number keys `1`, `2`, `3`
+
+## Features
+
+- Four enemy types with different movement, health, damage, and XP rewards:
+  - Chaser
+  - Sprinter
+  - Drifter
+  - Tank
+- XP, leveling, score, kill counter, and survival timer
+- Upgrade system for multishot, fire rate, bullet size, damage, movement speed, max HP, regeneration, magnet radius, and piercing
+- Neon-style procedural drawing for the player, enemies, bullets, gems, HUD, explosions, starfields, and grid background
+- Increasing difficulty over time with faster and larger enemy waves
 
 ## Requirements
 
-- [Godot 4.x with .NET support](https://godotengine.org/download)
-- .NET SDK (version compatible with your installed Godot .NET build)
+- [Godot 4.6 with .NET support](https://godotengine.org/download)
+- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
 
 ## Run Locally
 
 1. Open this folder in Godot.
-2. Let Godot restore/generate C# build artifacts.
-3. Press **F5** (Run Project).
+2. Allow Godot to restore/build the C# project if prompted.
+3. Press **F5** or click **Run Project**.
+4. From the main menu, press **Enter** or **Space** to start.
 
-## Build/Export
+## Build / Export
 
-- Configure export templates in Godot.
-- Use `Project -> Export` to build platform binaries.
-- Existing export artifacts are intentionally ignored by git.
+1. Install Godot export templates for your Godot version.
+2. Open **Project -> Export**.
+3. Select or configure a platform preset.
+4. Export the project.
 
-## Development Notes
+Generated exports and Godot/.NET build artifacts are ignored by git.
 
-- Core gameplay logic is in `Scripts/Game.cs`.
-- Main menu flow is in `Scripts/MainMenu.cs`.
-- Player, enemy, bullet, XP gem, and UI systems are split into dedicated scripts.
+## Project Structure
+
+```text
+Scenes/
+  Game.tscn        Main gameplay scene
+  MainMenu.tscn    Main menu scene
+Scripts/
+  Game.cs          Gameplay loop, spawning, collisions, leveling, score
+  Player.cs        Movement, health, auto-fire, player rendering
+  Enemy.cs         Enemy types, behavior, damage, rendering
+  Bullet.cs        Bullet movement, piercing, rendering
+  XpGem.cs         XP pickup behavior and magnet pull
+  UpgradePanel.cs  Level-up choices and upgrade state
+  Hud.cs           Health, XP, score, timer, and kill display
+  MainMenu.cs      Title screen and start flow
+  ExplosionEffect.cs
+project.godot      Godot project configuration
+2d-game.csproj     C# project configuration
+2d-game.sln        C# solution
+```
