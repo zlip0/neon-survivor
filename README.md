@@ -41,24 +41,3 @@ A minimalist neon arena-survival game built with **Godot 4.6 (.NET/C#)**. Move t
 4. Export the project.
 
 Generated exports and Godot/.NET build artifacts are ignored by git.
-
-## Project Structure
-
-```text
-Scenes/
-  Game.tscn        Main gameplay scene
-  MainMenu.tscn    Main menu scene
-Scripts/
-  Game.cs          Gameplay loop, spawning, collisions, leveling, score
-  Player.cs        Movement, health, auto-fire, player rendering
-  Enemy.cs         Enemy types, behavior, damage, rendering
-  Bullet.cs        Bullet movement, piercing, rendering
-  XpGem.cs         XP pickup behavior and magnet pull
-  UpgradePanel.cs  Level-up choices and upgrade state
-  Hud.cs           Health, XP, score, timer, and kill display
-  MainMenu.cs      Title screen and start flow
-  ExplosionEffect.cs
-project.godot      Godot project configuration
-2d-game.csproj     C# project configuration
-2d-game.sln        C# solution
-```
